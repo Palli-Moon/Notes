@@ -38,3 +38,13 @@ function func (true) {
 ```
 
 The first example has a semicolon at the end because a function is being declared and assigned to a variable, a semicolon is unnecceasary in the second example since there is no assignment going on. Loops and if statments should never have semicolons at the end.
+
+#### For-in
+To loop through all members of an object the for-in statement can be used.
+```javascript
+for(var x in obj) {
+    console.log(x);
+}
+```
+
+This code would loop through all the properties of obj and print out their name. **Note:** in this case, the name of the variables will be printed, **not** their values.
