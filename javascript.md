@@ -47,4 +47,4 @@ for(var x in obj) {
 }
 ```
 
-This code would loop through all the properties of obj and print out their name. **Note:** in this case, the name of the variables will be printed, **not** their values.
+This code would loop through all the properties of obj and print out their name. **Note:** in this case, the name of the variables will be printed, **not** their values. To print their values, all you need to do is change the second line to `console.log(obj[x]);`, since this will access each property using the brackets notation.
