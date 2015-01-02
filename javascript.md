@@ -22,8 +22,35 @@ var Obj = {
     }
 };
 ```
+Members and methods can also be added using the *this* keyword.
 
-Note: the var keyword is not used when creating an object. More properties can be added to an object after it's creation like so `Obj.c = true`, however it may get confusing what properties the objects has at any given time if added afterwards. A property can be removed with *delete* keyword, ex: `delete Obj.b`.
+```javascript
+var Obj = {
+    this.a = "a";
+    this.b = 2;
+    this.func = function(x) {
+        return x;
+    };
+};
+```
+
+This code snippet works exactly like the one above.
+
+More properties can be added to an object after it's creation like so `Obj.c = true`, however it may get confusing what properties the objects has at any given time if added afterwards. A property can be removed with *delete* keyword, ex: `delete Obj.b`.
+
+Objects with constructors do not use the *var* keyword, but are instead declared as a function.
+
+```javascript
+function Obj(a, b) = {
+    this.a = a;
+    var b = b;
+    var c = function() {
+        return a + b;
+    };
+};
+```
+
+Members and properties can be made private by using the *var* keyword instead of *this*. In the above example only the variable *a* can be called directly from the object.
 
 One can add a method to all objects of a type that have been created with the prototype keyword. E.g. if two objects have already been created of a certain type and method needs to be added, it can be done like so: `Obj.prototype.func = function() { return 0; };`. The two objects of type *Obj* will now both have the *func* function.
 
