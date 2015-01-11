@@ -1,9 +1,10 @@
 Git notes
-----------
+=========
+
 Some notes on how to set up and use git, specifically geared towards github.
 
-### Setup
-#### Config
+## Setup
+### Config
 ```
 git config --global user.name
 git config --global user.email example@email.com
@@ -15,25 +16,25 @@ git config --global color.ui true
 ```
 It is recommended to set the color.ui variable to true, since it will colour some words in the git output appropriately, e.g. when running `git status`.
 
-#### Aliases
+### Aliases
 ```
 git config --global alias.key "status"
 ```
 To make aliases use this command, where *key* is the word you would like to alias the command `git status` to. Notice that you will not have to write git in front of the command being aliased.
 
 
-### Misc (no category yet)
-#### Pushing
+## Misc (no category yet)
+### Pushing
 It's good practice to use `git push remote-branch local-branch` rather than just `git push`, as the branch in use might change.
 
-#### Staging
+### Staging
  * `git reset HEAD filename` to unstage a file.
  * To undo all changes made to file since the last commit, use `git checkout filename`.
 
-#### Tools
+### Tools
 Gitk is a great tool for visualising branches and commits.
 
-#### Flags (status)
+### Flags (status)
 ```
 git status -s
 ```
