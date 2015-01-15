@@ -3,6 +3,20 @@ JavaScript
 
 ### console.log()
 `console.log()` can be used on an object to print it's methods members.
+```javascript
+
+```
+
+### Correct number of parameters
+Javascript will not enforce th correct number of parameters in a function.
+It is therefore recommended to use code like this to avoid getting undefined
+as a return value when all parameters are not used.
+```javascript
+function Shape( x, y ) {
+    this.x = ( x === undefined ) ? 0 : x;
+    this.y = ( y === undefined ) ? 0 : y;
+}
+```
 
 ### map()
 ```javascript
