@@ -1,6 +1,9 @@
 JavaScript
 ==========
 
+### console.log()
+`console.log()` can be used on an object to print it's methods members.
+
 ### map()
 ```javascript
 var arr = [1, 2, 3]
@@ -55,6 +58,24 @@ Methods and properties can be made private by using the *var* keyword instead of
 One can add a method to all objects of a type that have been created with the prototype keyword. E.g. if two objects have already been created of a certain type and method needs to be added, it can be done like so: `Obj.prototype.func = function() { return 0; };`. The two objects of type *Obj* will now both have the *func* function.
 
 The prototype keyword can also be used to make a class inherit from another. E.g. `Obj2.prototype = new Obj();`. Now *Obj2* has all the methods and properties of *Obj*, except if any of them were overwritten in *Obj2's* constructor.
+
+## Nested objects
+Objects can be nested within another object.
+
+```javascript
+var shape = {
+    start: {
+        x: 0,
+        y: 0
+    },
+    end: {
+        x: 0,
+        y: 0
+    }
+};
+```
+
+The start x coordinate of shape can then be accessed like so `shape.start.x`.
 
 ### Semicolons
 In JavaScript, semicolons should be used similar to C++. They are generally not needed at all, but they are best used at the end of any statement. They are only used after curly brackets if a variable is being assigned. Consider:
