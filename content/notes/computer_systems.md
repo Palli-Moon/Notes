@@ -1,2 +1,2 @@
-Computer systems and assembly
-=============================
+Computer systems
+================
