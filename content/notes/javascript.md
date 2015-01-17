@@ -4,11 +4,24 @@ JavaScript
 ### console.log()
 `console.log()` can be used on an object to print it's methods members.
 ```javascript
+var shape = {
+    color: "Red",
+    width: 10,
+    height: 15,
+    getArea: function(){
+        return width * height;
+    }
+};
+```
 
+will return:
+
+```javascript
+Object {color: "Red", width: 10, height: 15, getArea: function}
 ```
 
 ### Correct number of parameters
-Javascript will not enforce th correct number of parameters in a function.
+Javascript will not enforce the correct number of parameters in a function.
 It is therefore recommended to use code like this to avoid getting undefined
 as a return value when all parameters are not used.
 ```javascript
@@ -17,6 +30,8 @@ function Shape( x, y ) {
     this.y = ( y === undefined ) ? 0 : y;
 }
 ```
+**Note:** the `===` should be used in most cases as `x == undefined` might
+return true if x is equal to 0, or null, etc.
 
 ### map()
 ```javascript
