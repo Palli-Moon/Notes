@@ -29,6 +29,21 @@ To make aliases use this command, where *key* is the word you would like to
 alias the command `git status` to. Notice that you will not have to write git in
 front of the command being aliased.
 
+### Remotes
+```
+git remote -v
+>> origin git@github.com:github/git-reference.git (fetch)
+>> origin git@github.com:github/git-reference.git (push)
+```
+This command will list the remotes currently set to the repository. The lines
+prefixed by >> is the an example of the output git will respond with. To add a
+new remote, one can use the
+```
+git remote add github git@github.com:user/repo.git
+```
+command. In the example github is the name of the new remote and would need to
+be used when pushing. In this case `git push github master` would then be used
+to push to the new remote.
 
 ## Misc (no category yet)
 ### Pushing
