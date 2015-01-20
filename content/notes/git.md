@@ -45,6 +45,13 @@ command. In the example github is the name of the new remote and would need to
 be used when pushing. In this case `git push github master` would then be used
 to push to the new remote.
 
+To change the remote rather than adding a new one use the following code.
+
+```
+git remote set-url origin git@github.com:user/repo.git
+```
+This change the origin remote.
+
 ## Misc (no category yet)
 ### Pushing
 It's good practice to use `git push remote-branch local-branch` rather than just
