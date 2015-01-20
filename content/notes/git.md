@@ -50,7 +50,7 @@ To change the remote rather than adding a new one use the following code.
 ```
 git remote set-url origin git@github.com:user/repo.git
 ```
-This change the origin remote.
+This changes the origin remote.
 
 ## Misc (no category yet)
 ### Pushing
