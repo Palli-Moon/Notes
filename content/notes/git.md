@@ -32,11 +32,11 @@ front of the command being aliased.
 ### Remotes
 ```
 git remote -v
->> origin git@github.com:github/git-reference.git (fetch)
->> origin git@github.com:github/git-reference.git (push)
+# origin git@github.com:github/git-reference.git (fetch)
+# origin git@github.com:github/git-reference.git (push)
 ```
 This command will list the remotes currently set to the repository. The lines
-prefixed by >> is the an example of the output git will respond with. To add a
+prefixed by # is an example of the output git will respond with. To add a
 new remote, one can use the
 ```
 git remote add github git@github.com:user/repo.git
