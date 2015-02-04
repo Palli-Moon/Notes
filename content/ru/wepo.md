@@ -54,3 +54,5 @@ When creating large applications large JavaScript applications it's conventional
 
 ### SemVer
 Semantic versioning (SemVer) is a pattern for versioning projects. It contains three numbers written as `1.2.3` where `1` would be the **major** version, `2` the **minor** and `3` the **patch**. Services like Grunt use this heavily and most of them support using the `~` and the `^` prefixes. The `~` means any patch up to the next minor version, e.g. `~1.2.7` would allow any version between `1.2.7` and `1.3.0`. `^1.2.7` then means any minor version up to the next major version, or anything below `2.0.0`
+
+Read more: http://semver.org/
