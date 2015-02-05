@@ -61,3 +61,38 @@ Read more: http://semver.org/
 Content delivery networks (CDN) are away of including a library (especially JavaScript ones) into your project without actually downloading it. Services such as google provide hosting for these libraries and make it easy for people to add some jQuery, for instance, into their project quickly. This may make site loading a bit slower however and should therefore not be used as a long-term solution for large projects.
 
 JavaScript CDN: https://cdnjs.com/
+
+### Links
+http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript
+
+###### Feb 5, 2015
+
+## JavaScript libraries
+### Underscore.js
+[Undescore](http://underscorejs.org/) has a collection of utility functions adding functional aspects to JavaScript.
+
+Underscore was recently forked and now has an alternate version called [lodash](https://lodash.com/), which may currently be in more active development.
+
+[Some differences between the two libraries](http://benmccormick.org/2014/11/12/underscore-vs-lodash/).
+
+The name comes from the fact that all the utility functions use the underscore (or low dash) in front of them. Example:
+```javascript
+_.each( arr, function(i) {
+    sum += i;
+}
+```
+
+### Template libraries
+The two most active template libraries are currently [mustache](https://mustache.github.io/) and [handlebars](http://handlebarsjs.com/). They are used to set up a template for data to be injected into. In the below example the item between the double curly brackets `{{}}`
+
+``` html
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+```
+
+### Module libraries
+Used to aid large projects in requiring dependencies properly. Examples of this are [RequireJS](http://requirejs.org/) and CommonJS.
