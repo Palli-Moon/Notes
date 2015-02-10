@@ -96,3 +96,37 @@ The two most active template libraries are currently [mustache](https://mustache
 
 ### Module libraries
 Used to aid large projects in requiring dependencies properly. Examples of this are [RequireJS](http://requirejs.org/) and CommonJS.
+
+###### Feb 10, 2015
+
+## AngularJS
+Angular apps typically start by declaring the global `angular.module("MyApp", [dependencies])`, where *dependencies* is an array of dependencies. This binds the JavaScript code to the html contained in the `ng-app="MyApp"` directive, usually defined on the `<html>` element. Angular uses these directives to enhance html elements. The module created at the top of the document is then used throughout the code i.e. `angular.module("MyApp").controller(...)`.
+
+### $scope
+The $scope objects acts as a sort of link between the Angular controller and the view. Using scope one can send information from the controller to the view.
+
+``` javascript
+# Javascript file
+angular.module("MyApp").controller("testcontroller",
+function testcontroller($scope) {
+    $scope.message = "Hello";
+});
+```
+
+``` html
+# Html file
+<div ng-controller="testcontroller">
+    {{message}}
+</div>
+```
+
+$scope can also carry more complex information, such as an object. The html end then uses a similar syntax as the handlebars templating library to display the data.
+
+### Links
+A few Angular related links.
+* [A few short videos on Angular and other services](https://egghead.io/)
+* [A todo app written in Angular](https://www.youtube.com/watch?v=WuiHuZq_cg4)
+* [End to end tutorial](https://www.youtube.com/watch?v=Ja2xDrtylBw)
+* [Some good Angular examples](http://www.angularjshub.com/examples/)
+* [A tutorial on Angular and others](https://thinkster.io/)
+* [Angular cheat sheet](http://www.cheatography.com/proloser/cheat-sheets/angularjs/)
