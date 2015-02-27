@@ -50,7 +50,7 @@ This Grunt task would run jshint (provided it's installed in the project) on eve
 
 ## Notes
 ### File structure
-When creating large applications large JavaScript applications it's conventional to keep all the source code in a directory named `src`. This separates the application code from configure files like the `package.json` file, or `Grintfile`.
+When creating large JavaScript applications it's conventional to keep all the source code in a directory named `src`. This separates the application code from configure files like the `package.json` file, or `Gruntfile`. If the code is somehow compiled (or perhaps  concatenated/minified/uglified), the resulting code would then go to a `dist` folder on the same level as `src`. If the application has any unit tests available, they are typically located in a `test` folder.
 
 ### SemVer
 Semantic versioning (SemVer) is a pattern for versioning projects. It contains three numbers written as `1.2.3` where `1` would be the **major** version, `2` the **minor** and `3` the **patch**. Services like Grunt use this heavily and most of them support using the `~` and the `^` prefixes. The `~` means any patch up to the next minor version, e.g. `~1.2.7` would allow any version between `1.2.7` and `1.3.0`. `^1.2.7` then means any minor version up to the next major version, or anything below `2.0.0`
@@ -130,3 +130,70 @@ A few Angular related links.
 * [Some good Angular examples](http://www.angularjshub.com/examples/)
 * [A tutorial on Angular and others](https://thinkster.io/)
 * [Angular cheat sheet](http://www.cheatography.com/proloser/cheat-sheets/angularjs/)
+
+###### Mar 2, 2015
+## Unit Testing
+Unit tests should be single responsibility, meaning each test should only test one thing. All statement of the following types should be tested:
+* branch statements (if-else)
+* loops
+* assignments (especially calculations)
+
+Ideally unit tests should have 100% code coverage, i.e. they should cover all code paths.
+
+### Test tools
+Karma is a test runner, while Jasmine is a test framework. 
+
+```
+npm install -g karma
+```
+
+PhantomJS is good for testing in a windowsless browser.
+
+```
+npm install -g phantomjs
+```
+
+Karma can be combined with [grunt](https://github.com/karma-runner/grunt-karma).
+
+### Karma
+What tests are run etc. is specified in the `karma.config.js` file.
+
+The file can be generated with the command
+```
+karma init
+```
+
+### Jasmine
+A [Jasmine](http://jasmine.github.io/) test suite often use the *.spec.js extension. It uses the `describe(description, function)` function to wrap the suite and a description should be written inside to describe it's purpose.
+
+``` javascript
+describe("Main test suite", function() {
+	// Tests go here
+});
+```
+Each test module should only test a single entity, such as a controller or a complex function.
+
+Each test is then described using the `it(description, function)` function. A test could therefore look something like
+
+``` javascript
+it("Test if a is equal to b", function() {
+	var a = 12;
+	var b = a;
+	expect(a).toBe(b);
+}
+```
+The test itself simply checks if the values are what it expects them to be. A lot more functions exist in jasmine for testing.
+
+`beforeEach(function)` and `afterEach(function)` can be used to run before and after each `it()`. This is a good place to create objects and other things that need initialization or cleanup. An example of this would be
+
+``` javascript
+var obj
+beforeEach(function() {
+	obj = new Obj();
+}
+```
+If `beforeEach()` had not been used the `obj` object would have to have been created for each `it()`.
+
+To check if a function has been called the `spyOn(object, "function-name")` function can be use in conjunction with `toHaveBeenCalled()` or `toHaveBeenCalledWidth(parameter, ...)` to check if it was called with the expected parameters.
+
+The `spyOn()` function checks for event on the given function while `toHaveBeenCalled()` will pass as long as the function was actually called.
