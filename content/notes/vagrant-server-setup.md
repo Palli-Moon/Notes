@@ -39,8 +39,14 @@ All of the steps hereafter are optional. They are simply my way of customising i
 Nvm is a version manager for node.js. It's a great thing to have installed and node versions can be swapped out easily if needed.
 
 Run these commands to install:
+
 ```curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash```
+
 ```echo ". ~/.nvm/nvm.sh" >> ~/.zshrc``` *(only if using zsh)*
+
 Reconnect to the VM to enable nvm
+
 ```nvm install 0.12``` *(or the version of node you want installed)*
+
 ```echo "nvm use 0.12" >> ~/.zshrc``` *(again, only for zsh)*
+
