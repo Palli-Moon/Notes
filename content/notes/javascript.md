@@ -77,7 +77,7 @@ Objects with constructors do not use the *var* keyword, but are instead declared
 as a function.
 
 ```javascript
-function Obj(a, b) = {
+function Obj(a, b) {
     this.a = a;
     var b = b;
     var c = function() {
