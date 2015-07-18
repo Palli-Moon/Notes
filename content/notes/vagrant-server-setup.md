@@ -47,7 +47,7 @@ To be able to *ssh* into the box on a Windows host without having to write the p
 2. In PuTTY: set the field `Connection -> Data -> Auto-login username` to `vagrant`
 3. In PuTTY: navigate the `Connection -> SSH -> Auth -> Private key file for authentication` field to the `insecure_private_key.ppk`. It should be in the same location as the old `insecure_private_key`
 
-**NOTE:** these two lines **must** be in the `Vagrantfile`.
+**NOTE:** these two lines **must** be in the `Vagrantfile`:
 
 ```config.ssh.insert_key = false```
 
