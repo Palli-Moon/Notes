@@ -65,7 +65,7 @@ Run these commands to install:
 
 Reconnect to the VM to enable nvm
 
-```nvm install 0.12``` *(or the version of node you want installed)*
+```nvm install 4.1.1``` *(or the version of node you want installed)*
 
-```echo "nvm use 0.12" >> ~/.zshrc``` *(again, only for zsh)*
+```echo "nvm use 4.1.1" >> ~/.zshrc``` *(again, only for zsh)*
 
